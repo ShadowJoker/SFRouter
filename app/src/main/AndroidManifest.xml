@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.sfexpress.sfrouter.demo">
+
+    <application
+        android:allowBackup="false"
+        android:icon="@drawable/ic_launcher"
+        android:label="SFRouterDemo"
+        android:theme="@style/Base.Theme.AppCompat">
+        <activity android:name="com.sfexpress.sfrouter.demo.SchemeFilterActivity">
+
+            <!-- Schame -->
+            <intent-filter>
+                <data
+                    android:host="na.sfexpress.com"
+                    android:scheme="sfrouter" />
+
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+            </intent-filter>
+
+            <!-- App Links -->
+            <intent-filter
+                android:autoVerify="true"
+                tools:targetApi="m">
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="na.sfexpress.com"
+                    android:scheme="http" />
+                <data
+                    android:host="na.sfexpress.com"
+                    android:scheme="https" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.sfexpress.sfrouter.demo.MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.sfexpress.sfrouter.demo.TestWebview" />
+        <activity android:name="com.sfexpress.sfrouter.demo.testactivity.Test1Activity" />
+        <activity android:name="com.sfexpress.sfrouter.demo.testactivity.Test2Activity" />
+        <activity android:name="com.sfexpress.sfrouter.demo.testactivity.Test3Activity" />
+        <activity android:name="com.sfexpress.sfrouter.demo.testactivity.Test4Activity" />
+    </application>
+
+</manifest>
