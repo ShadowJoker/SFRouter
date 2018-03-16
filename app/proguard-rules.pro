@@ -58,10 +58,8 @@
    public void *(android.view.View);  
 }
 
--dontwarn com.alibaba.fastjson.**
--keep class com.alibaba.fastjson.**{*;}
-
-# ARouter
--keep public class com.alibaba.android.arouter.routes.**{*;}
--keep class * implements com.alibaba.android.arouter.facade.template.ISyringe{*;}
--keep interface * implements com.alibaba.android.arouter.facade.template.IProvider
+# SFRouter
+-keep public class com.sfexpress.sfrouter.**{*;}
+-keep public class com.sfexpress.sfrouter.routes.**{*;}
+-keep class * implements com.sfexpress.sfrouter.template.IInjector{*;}
+-keep interface * implements com.sfexpress.sfrouter.template.IProvider
